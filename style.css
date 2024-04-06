@@ -1,0 +1,119 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /* background: url("big_kimchi.jpg"); */
+  /* background-color: #cccccc; */
+
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+
+#cover
+{
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    /* background:rgba(255,255,255,0.5); */
+  background-repeat: no-repeat;
+  background-size: cover;
+background-position: 65% 50%;
+}
+
+
+#Title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600 !important;
+}
+
+.title {
+  background-color: #ffffff54;
+  padding: 1rem;
+  backdrop-filter: blur(15px);
+}
+
+.title h1 {
+  text-align: center;
+  padding-bottom: 0.7em;
+}
+.title h1 span {
+  font-weight: 300;
+  word-spacing: 3px;
+  line-height: 2em;
+  padding-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.title h1:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    content: "";
+    /* left: 0%; */
+    /* margin-left: -30px; */
+    background-color: #777;
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+  .title {
+      width: 45%;
+      margin: 1rem;
+      border-radius: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #cover {
+    display: flex;
+    align-items: center;
+  }
+  
+}
