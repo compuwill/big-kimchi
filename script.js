@@ -28,3 +28,30 @@ loadImage("big_kimchi.jpg").then(image =>
   }
                                  
 );
+
+
+
+
+
+document.body.addEventListener('click', nextImage, true); 
+
+var index = 0
+
+function nextImage()
+{
+  let newIndex = getRandomInt(13);
+  //ensure we don't have the same one
+  console.log(newIndex,index)
+  while(newIndex == index)
+  {
+    newIndex = getRandomInt(13);
+  }
+  index = newIndex
+  document.getElementById("cover").style.backgroundImage = `url(/gallery/${index}.jpg)` ;
+  document.getElementById("cover").style.backgroundPosition = `50% 50%` ;
+  document.getElementsByClassName("title")[0].style.opacity = 0;
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
